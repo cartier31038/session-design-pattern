@@ -14,13 +14,13 @@ export namespace FactoryMethod3 {
         protected abstract createTransport(): Transport
     }
 
-    /**
-     * Implementation layer
-     */
     interface Transport {
         deliver(good: string): void
     }
 
+    /**
+     * Concrete layer
+     */
     class SeaLogistic extends Logistic {
         protected createTransport() {
             return new Ship()
