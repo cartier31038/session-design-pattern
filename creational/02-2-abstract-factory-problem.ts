@@ -1,5 +1,5 @@
 /**
- * 02- Furniture simulator
+ * 02 - Furniture simulator multiple variant
  */
 export namespace AbstractFactory2 {
     class Chair {

@@ -1,5 +1,5 @@
 /**
- * 02- Furniture simulator
+ * 02 - Furniture simulator multiple variant with Abstract Factory and Showroom client
  */
 export namespace AbstractFactory3 {
     //Abstraction layer
