@@ -1,7 +1,7 @@
 /**
  * 02- Furniture simulator
  */
-export namespace AbstractFactory1 {
+export namespace AbstractFactory2 {
     class Chair {
         public hasLegs() {
             return true
