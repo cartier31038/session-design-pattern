@@ -11,5 +11,6 @@
     "editor.quickSuggestions": {
         "strings": true
     },
-    "editor.autoClosingQuotes": "always"
+    "editor.autoClosingQuotes": "always",
+    "cSpell.words": ["Fortuner", "Hilux", "Revo"]
 }
