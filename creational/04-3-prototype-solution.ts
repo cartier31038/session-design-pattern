@@ -3,9 +3,12 @@
  */
 export namespace Prototype3 {
     //Abstraction layer
+    interface Clone {
+        clone(): this
+    }
 
     //Concrete layer
-    class VisionPrototype {
+    class VisionPrototype implements Clone {
         public primitiveAbility: any
         public componentBody!: object
         public circularReferenceMind!: Mind
