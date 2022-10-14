@@ -3,10 +3,10 @@
  */
 export namespace Adapter1 {
     class RoundHole {
-        constructor(private radius: number) {}
+        constructor(private _radius: number) {}
 
         public fit(peg: RoundPeg): boolean {
-            return this.radius > peg.radius
+            return this._radius > peg.radius
         }
     }
 
@@ -14,6 +14,10 @@ export namespace Adapter1 {
         constructor(protected _radius: number) {}
 
         public get radius() {
+            return this._radius
+        }
+
+        public rad = () => {
             return this._radius
         }
     }
@@ -29,10 +33,10 @@ export namespace Adapter1 {
     class SquarePegAdapter extends RoundPeg {
         constructor(protected squarePeg: SquarePeg) {
             super(0)
-            this._radius = this.getRadius()
+            this._radius = this.radius
         }
 
-        public getRadius(): number {
+        public get radius(): number {
             return (this.squarePeg.width * Math.sqrt(2)) / 2
         }
     }
@@ -46,7 +50,7 @@ export namespace Adapter1 {
 
         const squarePeg = new SquarePeg(8)
         const squarePegAdapter = new SquarePegAdapter(squarePeg)
-        console.log(squarePegAdapter.getRadius())
+        console.log(squarePegAdapter.radius)
         console.log(roundHole.fit(squarePegAdapter))
     })()
 }
