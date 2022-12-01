@@ -1,5 +1,5 @@
 /**
- * 02- Squre Pegs and Round Holes with Mixin
+ * 02 - Square Pegs and Round Holes with Mixin
  */
 export namespace Adapter2 {
     class RoundHole {
@@ -18,6 +18,7 @@ export namespace Adapter2 {
         }
     }
 
+    // Rest parameter constructure function type
     type Constructor = new (...args: any[]) => {}
 
     function SquarePegMixin<TBase extends Constructor>(Base: TBase) {

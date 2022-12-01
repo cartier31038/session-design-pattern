@@ -1,5 +1,5 @@
 /**
- * 01 - Squre Pegs and Round Holes
+ * 01 - Square Pegs and Round Holes
  */
 export namespace Adapter1 {
     class RoundHole {
