@@ -16,10 +16,6 @@ export namespace Adapter1 {
         public get radius() {
             return this._radius
         }
-
-        public rad = () => {
-            return this._radius
-        }
     }
 
     class SquarePeg {
@@ -43,12 +39,13 @@ export namespace Adapter1 {
 
     //IIFE (Immediately-Invoked Function Expression)
     ;(() => {
-        const roundHole = new RoundHole(5)
-
         const roundPeg = new RoundPeg(6)
+
+        const roundHole = new RoundHole(7)
         console.log(roundHole.fit(roundPeg))
 
         const squarePeg = new SquarePeg(8)
+
         const squarePegAdapter = new SquarePegAdapter(squarePeg)
         console.log(squarePegAdapter.radius)
         console.log(roundHole.fit(squarePegAdapter))

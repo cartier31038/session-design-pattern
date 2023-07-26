@@ -41,9 +41,9 @@ export namespace Adapter2 {
 
     //IIFE (Immediately-Invoked Function Expression)
     ;(() => {
-        const roundHole = new RoundHole(5)
-
         const roundPeg = new RoundPeg(6)
+
+        const roundHole = new RoundHole(7)
         console.log(roundHole.fit(roundPeg))
 
         const SquarePegAdapter = SquarePegMixin(RoundPeg)
